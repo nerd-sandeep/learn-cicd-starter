@@ -13,7 +13,7 @@ func TestGetAPIKey(t *testing.T) {
 	headers.Set("Authorization","ApiKey ValidKey")
 	apiKey, err := GetAPIKey(headers)
     got := apiKey
-    want := "ValidKey1"
+    want := "ValidKey"
 	if err != nil {
 		fmt.Println("Error:", err)
 	} else {
