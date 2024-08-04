@@ -98,22 +98,22 @@ func main() {
 	log.Fatal(srv.ListenAndServe())
 }
 
-func addParseTimeParam(input string) (string, error) {
-	const dummyScheme = "http://"
-	if !strings.Contains(input, dummyScheme) {
-		input = "http://" + input
-	}
-	u, err := url.Parse(input)
-	if err != nil {
-		return "", err
-	}
-	q := u.Query()
-	q.Add("parseTime", "true")
-	u.RawQuery = q.Encode()
-	returnUrl := u.String()
-	returnUrl = strings.TrimPrefix(returnUrl, dummyScheme)
-	return returnUrl, nil
-}
+// func addParseTimeParam(input string) (string, error) {
+// 	const dummyScheme = "http://"
+// 	if !strings.Contains(input, dummyScheme) {
+// 		input = "http://" + input
+// 	}
+// 	u, err := url.Parse(input)
+// 	if err != nil {
+// 		return "", err
+// 	}
+// 	q := u.Query()
+// 	q.Add("parseTime", "true")
+// 	u.RawQuery = q.Encode()
+// 	returnUrl := u.String()
+// 	returnUrl = strings.TrimPrefix(returnUrl, dummyScheme)
+// 	return returnUrl, nil
+// }
 
 // func unused() {
 // 	// this function does nothing
