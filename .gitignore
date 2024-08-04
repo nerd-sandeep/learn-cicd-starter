@@ -2,3 +2,10 @@ out
 .env
 learn-cicd-starter
 notely
+c.out
+vendor/github.com/antlr/
+vendor/github.com/klauspost/
+vendor/github.com/libsql/
+vendor/github.com/tursodatabase/
+vendor/golang.org/
+vendor/nhooyr.io/
